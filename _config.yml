@@ -236,6 +236,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -244,6 +245,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 
 # Archives
@@ -262,17 +264,23 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+year_archive:
+  type: liquid
+  path: /years/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
     - categories
     - tags
+    - years
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
+    year: archive-taxonomy
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+    year: /years/:name/
 
 
 # HTML Compression
@@ -297,5 +305,8 @@ defaults:
       share: true
       related: true
       show_date: true
+      toc: true
+      toc_sticky: true
+      toc_label: 목차
 
-# date_format: "%Y-%m-%d"
+# date_format: "%Y-%m-%d" 

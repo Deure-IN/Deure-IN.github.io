@@ -2,3 +2,4 @@ source "https://rubygems.org"
 gemspecs
 gem "minimal-mistakes-jekyll"
 gem "tzinfo-data"
+gem 'jekyll-redirect-from'
